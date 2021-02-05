@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>@serafimkvashnin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="Serafim Kvashnin">
+    <meta name="keywords" content="developer, programmer">
+    <meta name="author" content="Serafim Kvashnin">
+  </head>
+  <body>
+    <div class="page_container">
+      <div class="inner_conainer">
+        <h1>Serafim Kvashnin.</h1>
+        Hi, I'm an <span id="age">18</span> year old programmer & game developer.
+      </div>
+
+      <div class="footer">
+        Thanks, Serafim.<br/>
+        <span class="links"><a href="https://github.com/serafimkvashnin" target="_blank">Github</a> | <a href="https://twitter.com/serafimkvashnin" target="_blank">Twitter</a> | <a href="https://serafimkvashnin.itch.io" target="_blank">Itch.io</a></span>
+      </div>
+    </div>
+  </body>
+  <script>
+    const daysPerYear = 365;
+    const msPerDay = 1000 * 60 * 60 * 24;
+
+    function daysBetween(date1, date2) {
+      return Math.floor(Math.floor((date2.getTime() - date1.getTime()) / msPerDay) / daysPerYear)
+    }
+
+    var age = document.getElementById("age");
+
+    if (age) {
+      age.innerHTML = daysBetween(new Date(2001, 6, 1), new Date())
+    }
+
+    var devAge = document.getElementById("dev_age");
+
+    if (devAge) {
+      devAge.innerHTML = daysBetween(new Date(2013, 4, 20), new Date())
+    }
+  </script>
+  <!-- Prevents chrome from firing transitions (space is important) -->
+  <script> </script>
+</html>
