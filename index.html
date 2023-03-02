@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Landing Page</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="hero">
+		<h1>Welcome to My Landing Page</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat tortor vitae tellus elementum, vitae dignissim magna feugiat.</p>
+	</section>
+
+	<section class="about" id="about">
+		<h2>About Me</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat tortor vitae tellus elementum, vitae dignissim magna feugiat. Ut eget est ac urna hendrerit sagittis quis vel massa. Nulla facilisi. Phasellus ultricies risus ac risus posuere vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi porta velit eget aliquet iaculis. Mauris fringilla nunc a turpis interdum viverra. Donec euismod, metus at suscipit pellentesque, enim lorem auctor mi, vel placerat nisl sapien eget quam. </p>
+		<a href="#projects" class="btn-primary">View Projects</a>
+	</section>
+
+	<section class="projects" id="projects">
+		<h2>My Projects</h2>
+		<div class="project-container">
+			<div class="project-card">
+				<button class="project-button" onclick="openModal('Project 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat tortor vitae tellus elementum, vitae dignissim magna feugiat.')">
+					<h3>Project 1</h3>
+					<p>Short Description</p>
+				</button>
+			</div>
+			<div class="project-card">
+				<button class="project-button" onclick="openModal('Project 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat tortor vitae tellus elementum, vitae dignissim magna feugiat.')">
+					<h3>Project 2</h3>
+					<p>Short Description</p>
+				</button>
+			</div>
+			<div class="project-card">
+				<button class="project-button" onclick="openModal('Project 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat tortor vitae tellus elementum, vitae dignissim magna feugiat.')">		<h3>Project 3</h3>
+				<p>Short Description</p>
+			</button>
+		</div>
+	</div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+	<div class="modal-content">
+		<span class="close" onclick="closeModal()">&times;</span>
+		<h2 id="modal-title"></h2>
+		<p id="modal-description"></p>
+	</div>
+</div>
+
+<footer>
+	<p>&copy; 2023 My Landing Page</p>
+</footer>
+
+<script>
+	// Get the modal
+	var modal = document.getElementById("modal");
+
+	// Get the button that opens the modal
+	var btn = document.getElementsByClassName("project-button");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks the button, open the modal 
+	function openModal(title, description) {
+		document.getElementById("modal-title").innerHTML = title;
+		document.getElementById("modal-description").innerHTML = description;
+		modal.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	function closeModal() {
+		modal.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			closeModal();
+		}
+	}
+</script>
+
+</body>
+</html>
+
