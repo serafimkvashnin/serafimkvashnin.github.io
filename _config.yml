@@ -34,19 +34,6 @@ theme: minima
 plugins:
   - jekyll-feed
 
-# Navigation links
-nav_links:
-  - title: Home
-    url: "/"
-  - title: About
-    url: "/about.html"
-  - title: Blog
-    url: "/blog/"
-  - title: Contact
-    url: "/contact/"
-  - title: Privacy Policies
-    url: "/privacy-policy/"
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
