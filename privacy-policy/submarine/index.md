@@ -1,4 +1,7 @@
-# Privacy Policy for Submarine by Sima Games
+---
+layout: page
+title: Privacy Policy for Submarine by Sima Games
+---
 
 At Sima Games, we take your privacy very seriously. This Privacy Policy is designed to explain how we collect, use, and protect your personal information in relation to our game, Submarine.
 
@@ -24,4 +27,4 @@ We reserve the right to update or change our Privacy Policy at any time. If we m
 
 ## Contact Us
 
-If you have any questions about our Privacy Policy, please contact us at [serafimkvashnin@yandex.ru].
+If you have any questions about our Privacy Policy, please contact us at [contact me](mailto:serafimkvashnin@yandex.ru).

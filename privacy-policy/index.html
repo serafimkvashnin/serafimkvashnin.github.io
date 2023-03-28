@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Privacy Policy</title>
+  </head>
+  <body>
+    <h1>Privacy Policies</h1>
+    <ul>
+      {% for page in site.pages %}
+        {% if page.url contains '/privacy-policy/' %}
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </body>
+</html>
